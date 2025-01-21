@@ -276,7 +276,7 @@ window.addEventListener("load", async () => {
     var network = null;
     try {
         ctx.fillText("Loading neural network...", outputImage.width / 2, outputImage.height / 2, outputImage.width);
-        network = await ort.InferenceSession.create("./network.onnx", { executionProviders: ["webgl"] });
+        network = await ort.InferenceSession.create("../common/network.onnx", { executionProviders: ["webgl"] });
         // once it worked, show the controls
         renderResult({});
         ctx.font = "bold 24px sans-serif";
